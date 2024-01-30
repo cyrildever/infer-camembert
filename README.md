@@ -1,7 +1,6 @@
 # infer-camembert
 _Python implementation for text classification inference with CamemBERT fine-tuned models_
 
-
 ![PyPI](https://img.shields.io/pypi/v/infer-camembert)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/cyrildever/infer-camembert)
 ![GitHub last commit](https://img.shields.io/github/last-commit/cyrildever/infer-camembert)
