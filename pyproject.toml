@@ -27,10 +27,10 @@ dependencies = [
     "torch >= 2.1.0",
     "transformers >= 4.34.1",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.10.2"
 
 [project.urls]
-Homepage = "https://github.com/cyrildever/infer-camembert
+Homepage = "https://github.com/cyrildever/infer-camembert"
 
 [project.scripts]
-infer-camembert = "infer-camembert.__main__:main"
+infer-camembert = "infercamembert.__main__:main"
