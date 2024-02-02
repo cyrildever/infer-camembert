@@ -13,7 +13,7 @@ def infer(inputs: dict, labels: Labels, params: ModelParameters) -> list[dict]:
     Make predictions for the passed inputs
     """
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    hf_token = os.environ.get("HUGGINGFACE_TOKEN")
+    hf_token = os.getenv("HUGGINGFACE_TOKEN")
 
     # Load the model
     tokenizer = AutoTokenizer.from_pretrained(ModelParameters.BASE_MODEL)
