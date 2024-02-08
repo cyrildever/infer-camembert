@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "infer-camembert"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python implementation for text classification inference with CamemBERT fine-tuned models"
 readme = "README.md"
 authors = [{ name = "Cyril Dever", email = "cdever@pep-s.com" }]
@@ -24,6 +24,7 @@ keywords = [
     "camembert",
 ]
 dependencies = [
+    "numpy >= 1.25.0",
     "torch >= 2.1.0",
     "transformers >= 4.34.1",
 ]

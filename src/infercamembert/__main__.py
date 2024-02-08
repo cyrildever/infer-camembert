@@ -1,9 +1,7 @@
 import argparse
 import json
 
-from infercamembert.inference import infer
-from infercamembert.labels import Labels
-from infercamembert.parameters import DEFAULT_THRESHOLD, ModelParameters
+from infercamembert import infer, Labels, DEFAULT_THRESHOLD, ModelParameters
 
 
 def main(args):
@@ -19,7 +17,9 @@ def main(args):
     with open(args.dictionary, "r") as labelfile:
         labels = Labels(json.load(labelfile))
 
-    params = ModelParameters(args.model, args.threshold)
+    threshold = float(args.threshold) if args.threshold else DEFAULT_THRESHOLD
+
+    params = ModelParameters(args.model, threshold)
     output = infer(inputs, labels, params)
 
     json_str = json.dumps(output, indent=2, ensure_ascii=False)

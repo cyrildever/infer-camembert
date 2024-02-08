@@ -17,7 +17,7 @@ $ pip install infer-camembert
 
 For a private model, you must provide your HuggingFace token, either as an environment variable or under the `~/.huggingface` folder:
 ```console
-$ HUGGINGFACE_TOKEN=<value> python3 -m infer-camembert --input=example.jsonl --dictionary=labels.json --model="your-public-or-private-model-on-huggingface" --threshold=0.1 > results.jsonl
+$ HUGGINGFACE_TOKEN=<value> python3 -m infercamembert --input=example.jsonl --dictionary=labels.json --model="your-public-or-private-model-on-huggingface" --threshold=0.1 > results.jsonl
 ```
 
 Inputs must be in the form of a `dict` with the keys being your unique IDs and the values the text on which to perform inference, eg.
@@ -60,9 +60,7 @@ The results are presented as an array of predictions per input line, eg.
 
 Used as a Python library:
 ```python
-from infercamembert.inference import infer
-from infercamembert.labels import Labels
-from infercamembert.parameters import ModelParameters
+from infercamembert import infer, Labels, ModelParameters
 
 inputs = {
     "id1": "Very nice time spent in a gorgeous site.",

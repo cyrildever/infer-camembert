@@ -3,8 +3,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 
-from infercamembert.labels import Labels
-from infercamembert.parameters import ModelParameters
+from infercamembert import Labels, ModelParameters
 from infercamembert._process import get_preds_from_logits
 
 

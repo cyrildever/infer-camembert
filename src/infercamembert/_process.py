@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from infercamembert.labels import Labels
+from infercamembert import Labels
 
 
 def get_preds_from_logits(logits, threshold):
