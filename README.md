@@ -86,4 +86,4 @@ See the [LICENSE](./LICENSE) file.
 
 
 <hr />
-&copy; 2024 Cyril Dever. All rights reserved.
+&copy; 2024-2026 Cyril Dever. All rights reserved.
