@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Remove former distributions
-rm dist/infer_camembert-*
-rm dist/infer-camembert-*
+rm dist/infer*
 
 # Publish library to PyPI
 

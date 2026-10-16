@@ -78,6 +78,16 @@ params = ModelParameters("your-public-or-private-model-on-huggingface", 0.1)
 outputs = infer(inputs, labels, params)
 ```
 
+Each call to `infer` loads the model unless you pass one loaded beforehand with `load_model`, which is the way to go when inferring in several rounds (the texts are then processed in chunks of `batch_size`, padded to the longest text of each chunk):
+```python
+from infercamembert import infer, load_model, Labels, ModelParameters
+
+params = ModelParameters("your-public-or-private-model-on-huggingface", 0.1)
+loaded = load_model(params)
+for inputs in rounds_of_inputs:
+    outputs = infer(inputs, labels, params, loaded=loaded, batch_size=64)
+```
+
 
 ### License
 
